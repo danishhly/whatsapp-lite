@@ -2,7 +2,6 @@ package com.example.whatsapp_lite.service;
 
 import com.example.whatsapp_lite.dto.MessagePayload;
 import com.example.whatsapp_lite.model.ChatMessage;
-import com.example.whatsapp_lite.model.ChatMessage;
 import com.example.whatsapp_lite.repo.ChatMessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

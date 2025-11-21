@@ -1,14 +1,14 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://mongo:27017/whatsapp-lite
+      # CHANGE 'mongo' TO 'localhost'
+      uri: mongodb://localhost:27017/whatsapp-lite
   redis:
-    host: redis
+    # CHANGE 'redis' TO 'localhost'
+    host: localhost
     port: 6379
-
 server:
   port: 8080
-
 logging:
   level:
     root: INFO

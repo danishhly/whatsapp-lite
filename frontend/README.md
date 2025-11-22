@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# WhatsApp Lite 📱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A high-performance full-stack chat application designed to study scalable system architecture. This project replicates core WhatsApp features using a hybrid WebSocket + REST approach with a "Store and Forward" messaging mechanism.
 
-## Available Scripts
+## 🚀 Tech Stack
 
-In the project directory, you can run:
+**Backend:**
+* **Java Spring Boot:** Core application server.
+* **WebSockets (STOMP):** Real-time bidirectional communication.
+* **Redis:** Pub/Sub for cross-server message broadcasting and User Presence (Online Status).
+* **MongoDB:** Persistent storage for chat history and messages.
 
-### `npm start`
+**Frontend:**
+* **React.js:** Component-based UI.
+* **SockJS & StompJS:** Robust WebSocket clients with HTTP fallback.
+* **Axios:** REST API communication.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Infrastructure:**
+* **Docker Compose:** Containerization for MongoDB and Redis.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ⚡ Features implemented
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.  **Real-time Messaging:** Instant message delivery using WebSockets.
+2.  **Hybrid Architecture:** Automatically falls back to HTTP REST if WebSockets fail (Resilience).
+3.  **Store & Forward:** Messages are saved to MongoDB before delivery to ensure no data loss.
+4.  **Message Acknowledgments:**
+    * ✔ Sent (Single Tick) - Server received it.
+    * ✔✔ Delivered (Double Tick) - Recipient received it.
+5.  **User Presence:** Real-time "Online" status using a Heartbeat mechanism (Redis TTL).
+6.  **Optimistic UI:** Messages appear instantly on the sender's screen before server confirmation.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ How to Run Locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Start Infrastructure (Database & Cache)
+Make sure you have Docker Desktop installed and running.
+```bash
+docker compose up -d
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Start Backend (Spring Boot)
+Open the project in IntelliJ IDEA.
 
-### `npm run eject`
+Run the WhatsappLiteApplication class.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Server will start on http://localhost:8080.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start Frontend (React)
+Open a terminal in the frontend folder:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Bash
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+cd frontend
+npm install
+npm start
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app will open at http://localhost:3000.

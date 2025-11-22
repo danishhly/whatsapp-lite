@@ -57,14 +57,14 @@ npm start
 ```
 The app will open at http://localhost:3000.
 
-🧪 How to Test (Chatting)
+**🧪 How to Test (Chatting)**
 Since this is a "Lite" version without a Login screen, user IDs are currently hardcoded for testing.
 
-Open Tab 1 (User A):
+**1.Open Tab 1 (User A):**
 
 The app defaults to logging in as userA.
 
-Open Tab 2 (User B):
+**2.Open Tab 2 (User B):**
 
 Go to src/App.jsx in your code.
 
@@ -75,7 +75,7 @@ const otherUser = "userA";
 ```
 Save the file. The browser will refresh.
 
-Chat:
+** 3.Chat:**
 
 Type a message in Tab 1.
 

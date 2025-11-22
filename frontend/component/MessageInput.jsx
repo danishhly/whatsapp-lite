@@ -34,3 +34,14 @@ const styles = {
     padding: 10,
     borderRadius: 6,
     border: "1px solid #ccc",
+      },
+  button: {
+    marginLeft: 10,
+    padding: "10px 20px",
+    background: "#25D366",
+    border: "none",
+    color: "white",
+    borderRadius: 6,
+    cursor: "pointer",
+  },
+};

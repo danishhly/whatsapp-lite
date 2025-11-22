@@ -22,3 +22,15 @@ export default function MessageInput({ onSend }) {
     </div>
   );
 }
+const styles = {
+  container: {
+    display: "flex",
+    padding: 10,
+    borderTop: "1px solid #ddd",
+    background: "white",
+  },
+  input: {
+    flex: 1,
+    padding: 10,
+    borderRadius: 6,
+    border: "1px solid #ccc",

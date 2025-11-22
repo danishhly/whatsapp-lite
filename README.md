@@ -57,7 +57,7 @@ npm start
 ```
 The app will open at http://localhost:3000.
 
-**🧪 How to Test (Chatting)**
+## 🧪 How to Test (Chatting)
 Since this is a "Lite" version without a Login screen, user IDs are currently hardcoded for testing.
 
 **1.Open Tab 1 (User A):**
@@ -75,7 +75,7 @@ const otherUser = "userA";
 ```
 Save the file. The browser will refresh.
 
-** 3.Chat:**
+**3.Chat:**
 
 Type a message in Tab 1.
 

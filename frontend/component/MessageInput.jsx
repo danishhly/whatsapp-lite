@@ -1,0 +1,24 @@
+import React, { useState } from "react";
+
+export default function MessageInput({ onSend }) {
+  const [text, setText] = useState("");
+
+  const send = () => {
+    if (!text.trim()) return;
+    onSend(text);
+    setText("");
+  };
+
+  return (
+    <div style={styles.container}>
+      <input
+        style={styles.input}
+        value={text}
+        placeholder="Type a message..."
+        onChange={(e) => setText(e.target.value)}
+        onKeyDown={(e) => e.key === "Enter" && send()}
+      />
+      <button style={styles.button} onClick={send}>Send</button>
+    </div>
+  );
+}

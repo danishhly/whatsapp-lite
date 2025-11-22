@@ -20,3 +20,16 @@ export default function ChatWindow({ messages, me, onSend, isTyping }) {
     </div>
   );
 }
+
+const styles = {
+  container: {
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    background: "#f5f5f5",
+  },
+  messages: {
+    flex: 1,
+    padding: 20,
+    overflowY: "auto",
+  },

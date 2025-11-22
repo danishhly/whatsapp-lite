@@ -33,3 +33,9 @@ const styles = {
     padding: 20,
     overflowY: "auto",
   },
+  typing: {
+    color: "gray",
+    fontStyle: "italic",
+    marginLeft: 10,
+  },
+};

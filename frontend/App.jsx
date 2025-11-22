@@ -8,3 +8,13 @@ export default function App() {
 
   const { messages, sendMessage, isTyping, sendTyping } =
     useChat(currentUser, otherUser);
+    return (
+    <ChatWindow
+      messages={messages}
+      me={currentUser}
+      onSend={sendMessage}
+      isTyping={isTyping}
+      onTyping={sendTyping}
+    />
+  );
+}

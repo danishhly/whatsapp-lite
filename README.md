@@ -1,4 +1,4 @@
-# WhatsApp Lite 📱
+## WhatsApp Lite 📱
 
 A high-performance full-stack chat application designed to study scalable system architecture. This project replicates core WhatsApp features using a hybrid WebSocket + REST approach with a "Store and Forward" messaging mechanism.
 
